@@ -1,0 +1,32 @@
+version: "3.7"
+
+services:
+  frontend:
+    build: streamlit_front
+    ports:
+      - 8501:8501
+    networks:
+      AIservice:
+        aliases:
+          - frontend.docker
+    depends_on:
+      - backend
+    volumes:
+        - ./streamlit_front:/app
+        - ./storage:/storage
+
+  backend:
+    build: fastapi_back
+    ports:
+      - 8080:8080
+    networks:
+      AIservice:
+        aliases:
+          - backend.docker
+    volumes:
+      - ./fastapi_back:/app
+      - ./storage:/storage
+
+networks:
+  AIservice:
+    external: true
