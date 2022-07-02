@@ -1,7 +1,7 @@
 version: "3.7"
 
 services:
-  frontend:
+  web:
     build: streamlit_front
     ports:
       - 8501:8501
