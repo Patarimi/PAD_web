@@ -4,7 +4,7 @@ services:
   web:
     build: streamlit_front
     ports:
-      - 8501:8501
+      - $PORT:$PORT
     networks:
       AIservice:
         aliases:
