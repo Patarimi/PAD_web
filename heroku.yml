@@ -1,4 +1,4 @@
 build:
   docker:
     web: streamlit_front/Dockerfile
-    
+    backend: fastapi_back/Dockerfile    
