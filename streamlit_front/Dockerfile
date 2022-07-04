@@ -12,4 +12,4 @@ COPY . /app
 
 EXPOSE $PORT
 
-CMD ["streamlit run app.py --server.port $PORT"]
+CMD streamlit run app.py --server.port $PORT
