@@ -12,5 +12,5 @@ COPY . /app
 
 EXPOSE $PORT
 
-ENTRYPOINT ["streamlit","run","--server.port",$PORT]
-CMD ["app.py"]
+ENTRYPOINT ["streamlit","run"]
+CMD ["app.py","--server.port",$PORT]
